@@ -1,4 +1,3 @@
-
 const express = require("express");
 const cors = require("cors");
 const parser = require("body-parser");
@@ -13,6 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(parser.json());
+
 
 require("dotenv").config();
 const port = process.env.PORT || 5001;
@@ -213,3 +213,7 @@ app.post("/updateProductAvailability", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
+
+
